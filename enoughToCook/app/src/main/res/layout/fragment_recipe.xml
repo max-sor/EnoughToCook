@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_bg">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Generate recipes"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/loadingIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/generateRecipeButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/mealTypeChipGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/breakfastChip"
+            android:checkable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/dark_bg"
+            android:text="Breakfast"
+            android:textColor="@color/yellow"
+            app:chipStrokeColor="@drawable/chip_stroke_color"
+            app:chipBackgroundColor="@drawable/chip_background_color"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/lunchChip"
+            android:checkable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/dark_bg"
+            android:text="Lunch"
+            android:textColor="@color/yellow"
+            app:chipStrokeColor="@drawable/chip_stroke_color"
+            app:chipBackgroundColor="@drawable/chip_background_color"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/dinnerChip"
+            android:checkable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/dark_bg"
+            android:text="Dinner"
+            android:textColor="@color/yellow"
+            app:chipStrokeColor="@drawable/chip_stroke_color"
+            app:chipBackgroundColor="@drawable/chip_background_color"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/snackChip"
+            android:checkable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/dark_bg"
+            android:text="Snack"
+            android:textColor="@color/yellow"
+            app:chipStrokeColor="@drawable/chip_stroke_color"
+            app:chipBackgroundColor="@drawable/chip_background_color"/>
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <Button
+        android:id="@+id/generateRecipeButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Generate recipe"
+        android:backgroundTint="@color/green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mealTypeChipGroup" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recipesRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/generateRecipeButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

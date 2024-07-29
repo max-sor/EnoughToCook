@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.EnoughToCook" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor">@color/dark_bg</item>"
+    </style>
+
+    <style name="Theme.EnoughToCook" parent="Base.Theme.EnoughToCook" />
+    <style name="SpinnerTheme" parent="Widget.AppCompat.Spinner.Underlined">
+        <item name="android:background">@drawable/spinner_background</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:popupBackground">@color/light_bg</item>
+    </style>
+</resources>
